@@ -1,0 +1,44 @@
+#works {
+    width: 100%;
+    margin: 0 auto 125px;
+    text-align: center;
+    padding: 0;
+}
+
+h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    /*padding: 55px 0 30px;*/
+    margin-bottom: auto;
+
+}
+
+a {
+    color: #00A3D9;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+#works p {
+margin-bottom: 30px;
+font-size: 25px;
+font-family: monospace;
+color: #616161;
+background-color: darkgrey;
+height: 35px;
+text-align: center;
+padding-top: 7px;
+}
+#works li {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    margin: 0 25px 25px;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}

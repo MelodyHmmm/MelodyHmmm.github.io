@@ -1,0 +1,57 @@
+#bg{
+  width: 100%;
+  background: #EFEBE9;
+  margin: auto;
+  padding: 20px;
+}
+h1{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+font-weight: bold;
+}
+h4{
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #616161;
+
+}
+h3{
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  left: 13%;
+  margin-top: -15;
+
+}
+h5{
+
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #757575
+;
+
+}
+p{
+
+    position: relative;
+    font-size: 15px;
+    font-family: sans-serif;
+    width: 60%;
+    left: 18%;
+    right: 18%;
+}
+
+.pic{
+  position: relative;
+  display: inline-block;
+  height: 300px;
+  width: 33%;
+
+}

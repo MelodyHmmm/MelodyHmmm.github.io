@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Yuzhao Song</title>
+<link rel="stylesheet" href="assets/movies.css">
+<script src="assets/jquery-2.2.3.min.js"></script>
+<script src="assets/jquery.animate-colors-min.js"></script>
+</head>
+<body>
+  <div id="works">
+  		<h1>Movies</h1>
+  		<p>518+ Films Watched</p>
+  		<ul class="works">
+        <li><a href="http://www.imdb.com/title/tt1645089/?ref_=nv_sr_1"><img src="assets/img/inside.jpg" width="250" height="371"></a>Inside Job</li>
+        <li><a href="http://www.imdb.com/title/tt2402927/?ref_=fn_al_tt_1"><img src="assets/img/carol.jpg" width="250" height="371"></a>Carol</li>
+        <li><a href="http://www.imdb.com/title/tt1853728/?ref_=nv_sr_1"><img src="assets/img/django.jpg" width="250" height="371"></a>Django</li>
+        <li><a href=""><img src="assets/img/father.jpg" width="250"height="371" ></a>Like Father Like Son</li>
+        <li><a href=""><img src="assets/img/gravity.jpg" width="250" height="371"></a>Gravity</li>
+        <li><a href=""><img src="assets/img/diary.jpg" width="250" height="371"></a>Diary</li>
+        <li><a href=""><img src="assets/img/lamb.jpg" width="250"height="371" ></a>Silent Lamb</li>
+        <li><a href=""><img src="assets/img/killbill.jpg" width="250" height="371"></a>Kill Bill</li>
+        <li><a href=""><img src="assets/img/danishgirl.jpg" width="250" height="371"></a>Danishgirl</li>
+        <li><a href=""><img src="assets/img/pearl.jpg" width="250" height="371"></a>Pearl Button</li>
+        <li><a href=""><img src="assets/img/bye.jpg" width="250" height="371"></a>Farewell to My Concubine</li>
+        <li><a href=""><img src="assets/img/reader.jpg" width="250" height="385"></a>The Reader</li>
+        <li><a href=""><img src="assets/img/sun.jpg" width="250" height="371"></a>The Sun Also Rises</li>
+        <li><a href=""><img src="assets/img/bulletfly.jpg" width="250" height="371"></a>Let the bullet Fly</li>
+        <li><a href=""><img src="assets/img/etc copy.png" width="150"height="150" height="200"></li>
+      </ul>
+  </div>
+
+<script>
+$(document).ready(function(){
+  $('img').hover(function(){
+    shake($(this));
+  })
+});
+function shake(obj){
+    for(var i=1; i<=4; i++){
+      var range = parseInt(15*Math.random())
+      obj.animate({marginLeft: range+'px'},50);
+      obj.animate({marginLeft:0},50);
+    }
+}
+</script>
+</body>
+</html>

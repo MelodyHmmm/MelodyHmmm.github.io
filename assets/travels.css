@@ -1,0 +1,61 @@
+h1 {
+    font-size: 70px;
+    text-transform: uppercase;
+    /* padding: 55px 0 30px; */
+    margin-bottom: auto;
+}
+h2{
+  font-size: 50px;
+  text-transform: capitalize;
+}
+h3{
+  color: #9E9E9E;
+  background-color:rgba(128, 128, 128, 0.12);
+;
+  font-size: 30px;
+}
+li{
+  list-style: none;
+}
+p {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: monospace;
+    color: #616161;
+    background-color: darkgrey;
+    height: 35px;
+    text-align: center;
+    padding-top: 7px;
+}
+#travels {
+    width: 100%;
+    margin: 0 auto 125px;
+    text-align: center;
+    padding: 0;
+}
+
+.left-side{
+	width: 50%;
+	height: 100%;
+	background-size: cover;
+	z-index: 10;
+  position:absolute;
+}
+
+.right-side {
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	z-index: 10;
+  position:absolute;
+}
+#earth{
+  position: relative;
+  display: inline-block;
+  height:300px
+}
+#mapflat{
+  position: relative;
+  display: inline-block;
+  height:300px
+}
