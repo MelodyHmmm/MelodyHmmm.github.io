@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FP Yuzhao Song</title>
+<link rel="stylesheet" href="assets/index.css">
+<script src="assets/jquery-2.2.3.min.js"></script>
+<script src="assets/jquery.animate-colors-min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="top_left">
+		<div id="top_left_bg"></div>
+		<h1 id="top_left_header"><img src="assets/img/name.png"></h1>
+		<ul class="top_menu">
+			<li><a href="movies.html">电影</a></li>
+			<li><a href="travels.html">旅行</a></li>
+		</ul>
+
+	</div>
+	<div id="top_right">
+		<div id="top_right_bg"></div>
+			<h1 id="top_right_header"><p>Yuzhao</p><p>Song</p></h1>
+			<ul class="top_menu">
+				<li><a href="movies.html">Movie</a></li>
+				<li><a href="travels.html">Travel</a></li>
+			</ul>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+		$(window).on('load resize', function(){
+			var move = 300;
+			var spd = 900;
+			var alp = 0;
+			$(document).ready(function(){
+				$("#wrapper").show();
+				$("#top_left").hover(function(){
+					var ww =$(window).width();
+					var w2 = ww / 2;
+					var wl = w2 + move;
+					var wr = w2 -　move;
+					$("#top_left_bg").stop().fadeTo(spd,alp);
+					$("#top_left").stop().animate({width:wl + "px"},spd);
+					$("#top_right").stop().animate({width:wr + "px",left: wl + "px"},spd);
+					$("#top_arrow").stop().animate({left: wl + "px"},spd);
+					var tp = $(window).height() / 2 + 120;
+					var tp1 = $(window).height() + 1;
+					$("#top_left .top_menu").css("opacity",0);
+					$("#top_left .top_menu").css("top",tp1 +"px");
+					$("#top_left .top_menu").stop().animate({opacity:1,top:tp + "px"},800);
+					$("#top_right_header").stop().animate({color:'#fff'},spd);
+					$("#top_left_header").stop().animate({color:'#000'},spd);
+					$("#top_left_bg").stop().animate({backgroundColor:'#fff'},spd);
+				},function(){
+					var ww =$(window).width();
+					var w2 = ww / 2;
+					var wl = w2;
+					var wr = w2;
+					$("#top_left_bg").stop().fadeTo(spd,1.0);
+					$("#top_left").stop().animate({width:wl + "px"},spd);
+					$("#top_right").stop().animate({width:wr + "px",left: wl + "px"},spd);
+					$("#top_arrow").stop().animate({left: wl + "px"},spd);
+					$("#top_left .top_menu").stop().fadeTo(spd,0);
+					$("#top_right_header").stop().animate({color:'#fff'},spd);
+				});
+				$("#top_right").hover(function(){
+					var ww =$(window).width();
+					var w2 = ww / 2;
+					var wl = w2 - move;
+					var wr = w2 +　move;
+					$("#top_right_bg").stop().fadeTo(spd,alp);
+					$("#top_left").stop().animate({width:wl + "px"},spd);
+					$("#top_right").stop().animate({width:wr + "px",left: wl + "px"},spd);
+					$("#top_arrow").stop().animate({left: wl + "px"},spd);
+					var tp = $(window).height() / 2 + 120;
+					var tp1 = $(window).height() + 1;
+					$("#top_right .top_menu").css("opacity",0);
+					$("#top_right .top_menu").css("top",tp1 + "px");
+					$("#top_right .top_menu").stop().animate({opacity:1,top:tp + "px"},800);
+					$("#top_right_header").stop().animate({color:'#000'},spd);
+					$("#top_left_header").stop().animate({color:'#fff'},spd);
+					$("#top_left_bg").stop().animate({backgroundColor:'#000'},spd);
+				},function(){
+					var ww =$(window).width();
+					var w2 = ww / 2;
+					var wl = w2;
+					var wr = w2;
+					$("#top_right_bg").stop().fadeTo(spd,1.0);
+					$("#top_left").stop().animate({width:wl + "px"},spd);
+					$("#top_right").stop().animate({width:wr + "px",left: wl + "px"},spd);
+					$("#top_arrow").stop().animate({left: wl + "px"},spd);
+					$("#top_right .top_menu").stop().fadeTo(spd,0);
+					$("#top_right_header").stop().animate({color:'#fff'},spd);
+					$("#top_left_header").stop().animate({color:'#000'},spd);
+					$("#top_left_bg").stop().animate({backgroundColor:'#fff'},spd);
+				});
+				$(window).resize(function(){
+					var ww =$(window).width();
+					var w2 = ww / 2;
+					$("#top_left").stop().css("width","50%");
+					$("#top_right").stop().css("width","50%");
+					$("#top_right").stop().css("left","50%");
+					$("#top_arrow").stop().css("left","50%");
+				});
+
+				$("a").click(function(e){
+					e.preventDefault()
+					var href = $(this).attr("href");
+					$("#wrapper").fadeOut(spd,function(){
+						location.href = href;
+					})
+				})
+			});
+		});
+});
+</script>
+</body>
+</html>

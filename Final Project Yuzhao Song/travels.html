@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Yuzhao Song</title>
+<link rel="stylesheet" href="assets/travels.css">
+<script src="assets/jquery-2.2.3.min.js"></script>
+<script src="assets/jquery.animate-colors-min.js"></script>
+</head>
+<body>
+  <div id="travels">
+  		<h1>Map</h1>
+      <p>To travel ten thousand miles and read ten thousand books---读万卷书行万里路 </p>
+        <img id="earth" src="assets/img/earth.png">
+        <iframe id="mapflat" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d64076789.84107111!2d139.29200262085112!3d11.412127602537131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1461716977577" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="left-side">
+        <div class="dropDown">
+          <h2>Over 1 Month </h2>
+        </div>
+        <ul style="display:none">
+          <li><a href="subtravel.html"><h3>Israel</h3></a></li>
+          <li><a><h3>Nepal</h3></a></li>
+          <li><a><h3>USA</h3></a></li>
+          <li><a><h3>China</h3></a></li>
+          <li><a><h3>Japan</h3></a></li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <div class="dropDown">
+          <h2>Short Visit </h2>
+        </div>
+        <ul style="display:none">
+          <li><a><h3>Hongkong&Macao</h3></a></li>
+          <li><a><h3>Australia</h3></a></li>
+          <li><a><h3>Thailand</h3></a></li>
+          <li><a><h3>Taiwan</h3></a></li>
+          <li><a><h3>Hawaii</h3></a></li>
+        </ul>
+      </div>
+  </div>
+
+
+<script>
+$(document).ready(function(){
+  $('.dropDown').click(function(){
+    $(this).next().slideToggle(170);
+  })
+});
+</script>
+</body>
+</html>
